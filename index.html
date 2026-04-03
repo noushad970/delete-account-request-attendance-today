@@ -4,68 +4,139 @@
 <meta charset="UTF-8">
 <title>Attendance Today - Account Deletion Request</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #eef2f7;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #eef2f7);
+    animation: fadeIn 1s ease-in;
 }
-header {
-    background: #1a73e8;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-}
-.delete-btn {
-    background: #d93025;
-    border: none;
-    padding: 10px 15px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
+/* Container Card */
 .container {
     max-width: 850px;
-    margin: 40px auto;
+    margin: 50px auto;
     background: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: slideUp 0.8s ease;
 }
-h1 { margin-top: 0; }
 
+/* Headings */
+h1 {
+    margin-top: 0;
+    color: #1a73e8;
+}
+
+h3 {
+    color: #333;
+}
+
+/* List styling */
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Buttons */
+.confirm-btn {
+    background: linear-gradient(45deg, #34a853, #188038);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.confirm-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #2c8c46, #146c2e);
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26,115,232,0.3);
+}
+
+/* Modal */
 .modal {
     display: none;
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     top: 0;
     left: 0;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 0.3s ease;
 }
+
 .modal-box {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
     text-align: center;
+    animation: zoomIn 0.3s ease;
 }
-input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
 }
-.confirm-btn {
-    background: #188038;
-    color: white;
+
+/* Divider */
+hr {
+    margin: 25px 0;
     border: none;
-    padding: 10px;
-    width: 100%;
-    margin-top: 10px;
-    cursor: pointer;
+    height: 1px;
+    background: #ddd;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 </style>
 </head>
