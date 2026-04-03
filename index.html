@@ -28,7 +28,10 @@ h1 {
     margin-top: 0;
     color: #1a73e8;
 }
-
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
 h3 {
     color: #333;
 }
@@ -216,6 +219,10 @@ To proceed with deleting your account and associated data from
     </button>
 </div>
 <script>
+
+function redirectToForm(){
+    window.open("https://forms.gle/dDT5vehJuNNWEUtS6", "_blank");
+}
 function openModal(){
     document.getElementById("modal").style.display="flex";
 }
