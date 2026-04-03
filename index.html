@@ -1,166 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Attendance Today - Account Deletion</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Attendance Today - Account Deletion Request</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+header {
+    background: #1a73e8;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.delete-btn {
+    background: #d93025;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+h1 { margin-top: 0; }
 
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .delete-btn {
-            background: #e74c3c;
-            border: none;
-            padding: 10px 15px;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .delete-btn:hover {
-            background: #c0392b;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            margin-top: 0;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            width: 300px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .confirm-btn {
-            background: #27ae60;
-            border: none;
-            padding: 10px;
-            color: white;
-            width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .confirm-btn:hover {
-            background: #1e8449;
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: gray;
-        }
-    </style>
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+.modal-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+.confirm-btn {
+    background: #188038;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <div><strong>Attendance Today</strong></div>
-    <button class="delete-btn" onclick="openModal()">Delete Account</button>
-</header>
 
 <div class="container">
-    <h1>Account Deletion</h1>
-    <p>
-        This page allows users of <strong>Attendance Today</strong> to request permanent deletion of their account and associated data.
-    </p>
 
-    <h3>How it works:</h3>
-    <ul>
-        <li>Click the <b>Delete Account</b> button (top right).</li>
-        <li>Confirm by typing <b>"are you sure"</b>.</li>
-        <li>Your request will be submitted.</li>
-        <li>All user data will be deleted within 7 days.</li>
-    </ul>
+<h1>Account Deletion – Attendance Today</h1>
 
-    <h3>Need help?</h3>
-    <p>Email: <b>bmdnoushad@gmail.com</b></p>
+<p>
+This is the official account deletion request page for the mobile application 
+<strong>"Attendance Today"</strong> published on Google Play Store.
+</p>
 
-    <div class="footer">
-        Developer: nsdtechnologies
-    </div>
+<p>
+This application is developed and maintained by 
+<strong>nsdtechnologies</strong>.
+</p>
+
+<h3>How to delete your account</h3>
+<ul>
+<li>Open the app homescreen → click on the top right delete account button → Tap Delete Account</li>
+<li>Confirm by typing <b>"are you sure"</b></li>
+</ul>
+
+<h3>Data Deletion Policy</h3>
+<p>
+- All user data will be permanently deleted within 7 days  
+- This includes account information, attendance records, and associated data  
+- Some legal logs may be retained if required
+</p>
+
+<h3>Support Contact</h3>
+<p>Email: <b>abnoushad21@gmail.com</b></p>
+
+<hr>
+
+<p style="font-size:14px;color:gray;">
+Developer: NSD Technology<br>
+App Name: Attendance Today<br>
+Platform: Google Play Store
+</p>
+
 </div>
 
-<!-- Modal -->
-<div class="modal" id="deleteModal">
-    <div class="modal-content">
+<div class="modal" id="modal">
+    <div class="modal-box">
         <h3>Confirm Deletion</h3>
-        <p>Type <b>are you sure</b> to confirm</p>
-        <input type="text" id="confirmText" placeholder="Type here...">
+        <p>Type <b>are you sure</b></p>
+        <input id="confirmInput" type="text">
         <button class="confirm-btn" onclick="confirmDelete()">Confirm</button>
     </div>
 </div>
 
 <script>
-    function openModal() {
-        document.getElementById("deleteModal").style.display = "flex";
-    }
+function openModal(){
+    document.getElementById("modal").style.display="flex";
+}
 
-    function confirmDelete() {
-        let text = document.getElementById("confirmText").value.trim().toLowerCase();
-
-        if (text === "are you sure") {
-            alert("Your account deletion request has been submitted. We will process it within 7 days.");
-            document.getElementById("deleteModal").style.display = "none";
-        } else {
-            alert("Please type 'are you sure' correctly.");
-        }
+function confirmDelete(){
+    let val = document.getElementById("confirmInput").value.trim().toLowerCase();
+    if(val === "are you sure"){
+        alert("Account deletion request submitted. It will be processed within 7 days.");
+        document.getElementById("modal").style.display="none";
+    } else {
+        alert("Please type 'are you sure' correctly.");
     }
+}
 
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-        let modal = document.getElementById("deleteModal");
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
+window.onclick = function(e){
+    if(e.target.id === "modal"){
+        document.getElementById("modal").style.display="none";
     }
+}
 </script>
 
 </body>
